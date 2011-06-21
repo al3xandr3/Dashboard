@@ -64,7 +64,6 @@ def generate
                        ]),
     
     :pt_2020 =>  mydata["Portugal"].last,
-
     :pt_spark => Dashboard::Chart
       .spark(:name => "pt_spark", 
              :start_time => Date.new(2010).to_time.to_i * 1000,
