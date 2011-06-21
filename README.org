@@ -9,15 +9,14 @@ See mydashboard.rb & mydashboard.haml for the code of the dashboard above.
 Features and Details:
  - Uses http://www.highcharts.com/ as the charting engine
  - Requires jQuery
- - Example uses Haml for building output html, but you can use other template engines.
- - Includes simple(& multivariate) linear regression for visualizing trends.
- - Supports posting to a Confluence wiki.
- - Supports fetching of email attachments/content as data sources.
+ - Example uses Haml for building output html, but you can use other template engines
+ - Includes simple(& multivariate) linear regression for visualizing trends
+ - Supports posting to a Confluence wiki
+ - Supports fetching of email attachments/content as data sources
 
 Its not meant to be a complete fully featured lib for building html dashboards, but more as a starting point for your own custom dashboards, so do Fork/Copy and build on it.
 
-to run:
-
+to run example:
 > ruby mydashboard.rb
 
 Posted about in: [[http://al3xandr3.github.com/2011/05/24/dashboards.html]]
