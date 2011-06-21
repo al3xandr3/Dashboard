@@ -26,7 +26,6 @@ def generate
             :subtitle => "https://spreadsheets.google.com/ccc?key=phNtm3LmDZENoqUmTikF9DA#gid=10",
             :xlabel => "Year",
             :ylabel => "Population",
-            :start_time => Date.new(2010).to_time.to_i * 1000,
             :series => [
                         {
                           "pointInterval" => 365.5 * 24 * 3600 * 1000,
