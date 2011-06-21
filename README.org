@@ -1,7 +1,5 @@
 * Ruby Dashboard Builder
 
-To build html dashboards. Like this:
-
 [[http://al3xandr3.github.com/img/mydash1.png]]
 
 [[http://al3xandr3.github.com/img/mydash2.png]]
