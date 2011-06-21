@@ -1,0 +1,77 @@
+%script{:type => "text/javascript", :charset => "utf-8", :src => "https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"}
+%script{:type => "text/javascript", :charset => "utf-8", :src => "http://www.highcharts.com/js/highcharts.js"}
+%script{:type => "text/javascript", :charset => "utf-8", :src => "https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/jquery-ui.min.js"}
+%link{:rel=>"stylesheet", :type=>"text/css", :href=>"https://ajax.googleapis.com/ajax/libs/jqueryui/1.7/themes/smoothness/jquery-ui.css"}
+%script{:type => "text/javascript", :charset => "utf-8", :src => "http://autobahn.tablesorter.com/jquery.tablesorter.js"}
+%link{:rel=>"stylesheet", :type=>"text/css", :href=>"http://tablesorter.com/themes/blue/style.css"}
+
+.container
+
+  #tabs
+    %ul
+      %li  
+        %a(href='#tabs-1') Plots
+      %li 
+        %a(href='#tabs-2') Table
+
+    #tabs-1
+
+      #mygraph
+        = line_graph
+       
+      %table
+        %thead
+          %tr
+            %th Portugal
+            %th 10 years
+            %th 2020
+            
+        %tbody
+       
+          %tr
+            %td Portugal
+            %td
+              = pt_spark
+            %td
+              = pt_2020.commify
+       
+          %tr
+            %td Estonia
+            %td
+              = ee_spark
+            %td
+              = ee_2020.commify           
+  
+    #tabs-2
+    
+      %table#ptpopulation.tablesorter
+        %thead
+          %tr
+            %th Year
+            %th PT Population
+        %tbody
+          - countries.each do |row|
+            %tr
+              - row.each do |column|
+                %td= column
+    
+:javascript
+
+  jQuery("#tabs").tabs();
+  
+  jQuery(".container table").css({
+    "color": "#3E576F",
+    "cellspacing": "1"
+  });
+
+  jQuery(".container td").css({
+    "padding": "0.3em",
+    "vertical-align": "middle"
+  })
+
+  jQuery(".container thead th").css({
+    "border-bottom": "1px solid #ccc"
+  });
+
+  jQuery('#ptpopulation').tablesorter();
+  jQuery('#ptpopulation').attr({'cellspacing': "1", 'cellpadding': '0'})

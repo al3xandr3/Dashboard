@@ -1,0 +1,22 @@
+* Ruby Dashboard Builder
+
+To build html data dashboards. Like this:
+
+[[http://al3xandr3.github.com/img/mydash1.png]]
+
+[[http://al3xandr3.github.com/img/mydash2.png]]
+
+See mydashboard.rb for the code of the dashboard above.
+
+Features and Details:
+ - Uses http://www.highcharts.com/ as the charting engine.
+ - Requires on jquery.
+ - Example uses Haml for building output html, but you can replace it with something else.
+ - Includes simple(& multivariate) linear regression to allow visualize trends.
+ - Supports posting to confluence wiki.
+ - Supports fetching of email attachments & content as data sources.
+
+This is not meant to be a complete fully featured lib for building html dashboards, but more as a starting point for your own custom dashboards, so do Fork/Copy and build on it.
+
+Posted about in: [[http://al3xandr3.github.com/2011/05/24/dashboards.html]]
+
