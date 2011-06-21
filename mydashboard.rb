@@ -18,10 +18,8 @@ require File.dirname(__FILE__) + '/lib/dashboard.rb'
 
 def generate
 
-  mydata = MyData.get
+  mydata = MyData.get 
   
-  puts mydata["years"]
-
   opts = {
     :line_graph => Dashboard::Chart
       .plot(:name => "Country Population",
@@ -34,14 +32,12 @@ def generate
                           "pointInterval" => 365.5 * 24 * 3600 * 1000,
                           "pointStart" => Date.new(2010).to_time.to_i * 1000,
                           "name"=> 'Portugal',
-                          "visible"=> false,
                           "data" => mydata["Portugal"]
                         },
                         {
                           "pointInterval" => 365.5 * 24 * 3600 * 1000,
                           "pointStart" => Date.new(2010).to_time.to_i * 1000,
                           "name"=> 'Portugal Trend',
-                          "visible"=> false,
                           "data" => mydata["Portugal"].regression_simple.fit
                         },
                         {
@@ -55,12 +51,14 @@ def generate
                           "pointInterval" => 365.5 * 24 * 3600 * 1000,
                           "pointStart" => Date.new(2010).to_time.to_i * 1000,
                           "name"=> 'United Kingdom',
+                          "visible"=> false,
                           "data" => mydata["United Kingdom"]
                         },
                         {
                           "pointInterval" => 365.5 * 24 * 3600 * 1000,
                           "pointStart" => Date.new(2010).to_time.to_i * 1000,
                           "name"=> 'United States',
+                          "visible"=> false,
                           "data" => mydata["United States"]
                         }
                        ]),
@@ -85,7 +83,7 @@ def generate
     :countries => (2010..2020).zip(mydata["Portugal"]).each {|y,c| [y.to_s,c] }
   }
   
-  o = Haml::Engine
+  Haml::Engine
     .new(File.read(File.dirname(__FILE__) + "/mydashboard.haml"))
     .render(Object.new, opts)
 end

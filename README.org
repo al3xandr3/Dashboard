@@ -16,5 +16,9 @@ Features and Details:
 
 Its not meant to be a complete fully featured lib for building html dashboards, but more as a starting point for your own custom dashboards, so do Fork/Copy and build on it.
 
+to run:
+
+> ruby mydashboard.rb
+
 Posted about in: [[http://al3xandr3.github.com/2011/05/24/dashboards.html]]
 
