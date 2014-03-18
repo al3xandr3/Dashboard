@@ -1,8 +1,9 @@
 * Ruby Dashboard Builder
 
-[[http://al3xandr3.github.com/img/mydash1.png]]
 
-[[http://al3xandr3.github.com/img/mydash2.png]]
+[[http://al3xandr3.github.com/img/dash1.png]]
+(Output posted on a confluence page)
+
 
 See mydashboard.rb & mydashboard.haml for the code of the dashboard above.
 
@@ -22,5 +23,5 @@ to run example:
 > ruby mydashboard.rb
 #+END_SRC
 
-Posted about in: [[http://al3xandr3.github.com/2011/05/24/dashboards.html]]
+Posted about in: [[http://al3xandr3.github.io/dashboards.html]]
 
